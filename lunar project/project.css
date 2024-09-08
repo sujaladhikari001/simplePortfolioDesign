@@ -1,0 +1,238 @@
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.5fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    grid-template-areas:
+        "sidebar content1"
+        "sidebar content2"
+        "footer footer";
+    gap: 0.5rem;
+    font-family: Arial, sans-serif;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    background-color: #fff;
+    box-sizing: border-box; 
+    padding: 10px; 
+}
+
+
+#sidebar .image img {
+    max-width: 100%;
+    height: auto; 
+
+    display: block; /* Removes any extra space below the image */
+    margin: 0 auto; /* Centers the image horizontally if necessary */
+    margin-left: 9px;
+    border-radius: 5px;
+}
+
+
+#sidebar h2 {
+    color: #008080;
+}
+
+#sidebar .card {
+    font-size: 20px;
+}
+
+#sidebar .card p {
+    color: #008080;
+    margin-left: 8px;
+}
+
+#sidebar .card p i {
+    margin-right: 8px;
+    color: #008080;
+}
+
+.skills {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.skills h2 {
+    margin-bottom: 10px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    margin-bottom: 10px;
+}
+
+.skills ul li span {
+    font-weight: bold;
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 8px;
+}
+
+.bar-fill {
+    display: block;
+    height: 100%;
+    background-color: #008080;
+    transition: width 0.5s ease-in-out; 
+    border-radius: 3px;
+}
+
+#content1 {
+    grid-area: content1;
+    background-color: #fff;
+    color: #333;
+    padding: 7px;
+    width: auto;
+}
+
+.work-experience {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.work-experience h2 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #00695c;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 6px rgba(2, 110, 110, 0.4);
+}
+
+.work-experience h2 i {
+    margin-right: 10px;
+}
+
+.job {
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #008080;
+}
+
+.date {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.date i {
+    margin-right: 5px;
+    color: #008080;
+}
+
+.current {
+    background-color: #00695c;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#content2 {
+    grid-area: content2;
+    background-color: #fff;
+    color: #333;
+    width: auto;
+}
+
+#content2 .education {
+    background: #fff;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+ #content2 .education h2 {
+    text-align: center;
+    text-shadow: 0 4px 6px rgba(2, 110, 110, 0.4);
+    /* margin-top: 5px; */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+h3 {
+    margin: 0;
+}
+
+.fa-graduation-cap, .fa-w3schools, .fa-building, .fa-code {
+    margin-left: 5px;
+    color: #333;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #008080; 
+    padding: 15px; 
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(1, 82, 82, 0.4);
+    width: 100%;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-media ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.social-media a {
+    color: #fff;
+}
+
+.social-media i {
+    font-size: 20px;
+}
+
+.powered-by {
+    color: #fff;
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        grid-template-columns: 0.3fr 1fr;
+        grid-template-rows: 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+            "sidebar"
+            "content1"
+            "content2"
+            "footer";
+    }
+    
+}
